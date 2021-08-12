@@ -1,7 +1,18 @@
+body{
+    background: #222629
+}
+
+.header{
+    top: 0;
+    position: sticky;
+    background: #1A1E21;
+    z-index: 1;
+}
+
+
 .weather-list{
         display: flex;
         flex-direction: column;
-        
 }
 
 .weather-item{
@@ -17,7 +28,7 @@
 .weather-header{
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
-    background: white;
+    background: #1A1E21;
 }
 ul{
     padding: 0;
@@ -34,4 +45,11 @@ img{
 
 .container{
     width: 1296px;
+}
+
+
+@media only screen and (max-width : 450px) {
+    .container{
+        width: 300px;
+    }
 }
