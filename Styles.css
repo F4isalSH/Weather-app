@@ -1,0 +1,37 @@
+.weather-list{
+        display: flex;
+        flex-direction: column;
+        
+}
+
+.weather-item{
+    position: relative;
+}
+
+.temperature{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.weather-header{
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    background: white;
+}
+ul{
+    padding: 0;
+    margin: 0;
+}
+
+img{
+    width: 100%;
+    height: 250px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    object-fit: cover;
+}
+
+.container{
+    width: 1296px;
+}

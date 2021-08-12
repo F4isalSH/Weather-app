@@ -11,14 +11,27 @@
 </head>
 <body style="background: #222629">
     <!-- Header -->
-    <div class="container text-center py-4">
+    <div class="text-center py-4">
         <h2 class="text-light display-3">Weather App</h2>
     </div>
     <!-- Add location input -->
-    <div class="text-center container px-5">
-        <form class="search">
-            <input type="text" class="form-control" name = "input" autocomplete="off" placeholder="Add Location">
-        </form> 
+    <div class="text-center p-4">
+        <button type="button" class="btn btn-dark active">Click me!</button>
+    </div>
+
+    <div class="my-4 container">
+        <ul class="weather-list">
+            <li class="m-2 weather-item">
+                <div class="weather-header display-5 text-center"><span>Khobar</span></div>
+                <img src="../../img/night.svg" alt="">
+                <div class="temperature display-3 text-light"><span>45°C</span></div>
+            </li>
+            <li class="m-2 weather-item">
+                <div class="weather-header display-5 text-center"><span>Jeddah</span></div>
+                <img src="../../img/day.svg" alt="">
+                <div class="temperature display-3"><span>45°C</span></div>
+            </li>
+        </ul>
     </div>
 
 <script src="weatherData.js"></script>
