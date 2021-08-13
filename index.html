@@ -14,10 +14,12 @@
         <h2 class="text-light display-6">Weather App</h2>
     </div>
     <!-- Add location input -->
-    <div class="text-center m-3">
-        <button type="button" class="btn btn-dark active"><span class="display-7">Search</span></button>
+    <div class="text-center my-3 search-bar" >
+        <form class="locationForm">
+            <input type="text" name="location" class="form-control" placeholder="Toronto.." autocomplete="off">
+        </form>
     </div>
-
+        
     <div class="my-4 container">
         <ul class="weather-list">
             <li class="m-2 weather-item">
@@ -25,14 +27,9 @@
                 <img src="../../img/night.svg" alt="">
                 <div class="temperature display-3 text-light"><span>23°C</span></div>
             </li>     
-            <li class="m-2 weather-item">
-                <div class="weather-header display-5 bg-light text-center "><span>New York</span></div>
-                <img src="../../img/day.svg" alt="">
-                <div class="temperature display-3"><span>33°C</span></div>
-            </li>     
         </ul>
     </div>
-<script src="weatherData.js"></script>
 <script src="app.js"></script>
+<script src="weatherData.js"></script>
 </body>
 </html>

@@ -1,7 +1,20 @@
 body{
     background: #222629
 }
-
+.search-bar{
+    margin-right: 100px;
+    margin-left: 100px;
+}
+.search-bar input[type=text]{
+    background: #1A1E21;
+    color: white;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom-color: white;
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
+}
 .header{
     top: 0;
     position: sticky;
@@ -53,3 +66,18 @@ img{
         width: 300px;
     }
 }
+
+@media only screen and (min-width : 900px) and (max-width:1500px){
+    .search-bar{
+        margin-right: 300px;
+        margin-left: 300px;
+    }
+}
+
+@media only screen and (min-width : 1500px) and (max-width:3000px){
+    .search-bar{
+        margin-right: 650px;
+        margin-left: 650px;
+    }
+}
+

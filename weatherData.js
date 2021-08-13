@@ -8,7 +8,7 @@ const getCity = async (city) =>{
     const query   = `?apikey=${apiKey}&q=${city}`
     const response = await fetch(baseUrl + query);
     const data = await response.json();
-    return data[0].Key
+    return data[0]
 }
 
 
