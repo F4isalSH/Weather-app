@@ -1,8 +1,19 @@
 const locationForm = document.querySelector('.locationForm')
 const weatherList = document.querySelector('.weather-list')
-const addLocation = (location , data) =>{
-    const temperature = data.Temperature.Metric.Value;
-    if(data.IsDayTime){
+
+const allDetails = async (location) =>{
+    const cityDets = await getCity(location)
+    const weatherDets = await getWeather(cityDets.Key)
+    return{
+        cityDets: cityDets,
+        weatherDets: weatherDets,
+    }
+}
+
+const addLocation = (data) =>{
+    const temperature = data.weatherDets.Temperature.Metric.Value;
+    const location = data.cityDets.EnglishName;
+    if(data.weatherDets.IsDayTime){
         let html =
         `<li class="m-2 weather-item">
         <div class="weather-header display-5 bg-light text-center "><span>${location}</span></div>
@@ -24,11 +35,10 @@ const addLocation = (location , data) =>{
 
 locationForm.addEventListener(('submit'), e =>{
     e.preventDefault()
-    const location = e.target.location.value;
-    getCity(e.target.location.value)
-    .then(data => getWeather(data.Key))
-    .then(data => addLocation(location, data))
-    .catch(error => console.log(error))
+    allDetails(e.target.location.value)
+    .then(data => addLocation(data))
+    .catch(err => console.log(err))
+
     locationForm.reset()
 })
 

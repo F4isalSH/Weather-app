@@ -1,5 +1,5 @@
 // API key received from accuweather website
-const apiKey = 'X6emy93Gz3jfFPnvznjlVzKFcl9KD7hh'
+const apiKey = 'PDvA14HViuM7ibxIGrxDBHm2ww3JtZF2'
 
 
 // Function for getting the city key
