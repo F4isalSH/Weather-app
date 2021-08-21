@@ -1,5 +1,5 @@
 # Weather-app
-Welcome to my wether application!
+Welcome to my weather application!
 In this project you will be able to get the weather information on any city by submitting the city name!
 This uses the accuweather api and retrieves all data necessary and displays it on screen.
 
