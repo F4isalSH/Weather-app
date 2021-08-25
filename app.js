@@ -1,22 +1,20 @@
 const locationForm = document.querySelector('.locationForm')
 const weatherCard = document.querySelector('.container')
+const forecast = new Forecast()
 
 
-const allDetails = async (location) =>{
-    const cityDets = await getCity(location)
-    const weatherDets = await getWeather(cityDets.Key)
-    return{
-        cityDets: cityDets,
-        weatherDets: weatherDets,
-    }
+const clear  = (message) =>{
+    console.log(message)
+    localStorage.clear()
 }
 
 const updateCard = (location) =>{
         localStorage.setItem('location', location)
-        allDetails(location)
+         forecast.allDetails(location)
         .then(data => addLocation(data))
-        .catch(err => console.log(err))
+        .catch(err => clear(err))
 }
+
 
 
 const addLocation = (data) =>{
