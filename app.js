@@ -2,7 +2,6 @@ const locationForm = document.querySelector('.locationForm')
 const weatherCard = document.querySelector('.container')
 const forecast = new Forecast()
 
-
 const clear  = (message) =>{
     console.log(message)
     localStorage.clear()
@@ -14,8 +13,6 @@ const updateCard = (location) =>{
         .then(data => addLocation(data))
         .catch(err => clear(err))
 }
-
-
 
 const addLocation = (data) =>{
     const temperature = data.weatherDets.Temperature.Metric.Value;
