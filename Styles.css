@@ -1,11 +1,14 @@
 body{
+    min-height: 100vh;
     background: #222629
+    
 }
-.search-bar{
+.locationForm{
     margin-right: 100px;
     margin-left: 100px;
 }
-.search-bar input[type=text]{
+
+.locationForm input[type=text]{
     background: #1A1E21;
     color: white;
     border-top: none;
@@ -15,7 +18,7 @@ body{
     border-top-right-radius: 7px;
     border-top-left-radius: 7px;
 }
-.header{
+header{
     top: 0;
     position: sticky;
     background: #1A1E21;
@@ -44,6 +47,12 @@ img{
     object-fit: cover;
 }
 
+footer img {
+    width: 65px;
+    height: 65px;
+}
+
+
 .container{
     position: relative;
     width: 550px;
@@ -59,15 +68,15 @@ img{
     }
 }
 
-@media only screen and (min-width : 900px) and (max-width:1500px){
-    .search-bar{
-        margin-right: 300px;
-        margin-left: 300px;
+@media only screen and (min-width : 800px) and (max-width:1499px){
+    .locationForm{
+        margin-right: 550px;
+        margin-left: 550px;
     }
 }
 
 @media only screen and (min-width : 1500px) and (max-width:3000px){
-    .search-bar{
+    .locationForm{
         margin-right: 800px;
         margin-left: 800px;
     }

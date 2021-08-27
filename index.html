@@ -8,21 +8,24 @@
     <link rel="stylesheet" href="Styles.css">
     <title>Weather App</title>
 </head>
-<body>
-    <!-- Header -->
-    <div class="text-center py-4 header">
+<body class="d-flex flex-column">
+    
+    <header class="text-center py-4">
         <h2 class="text-light display-6">Weather App</h2>
-    </div>
-    <!-- Add location input -->
-    <div class="text-center my-3 search-bar" >
-        <form class="locationForm">
+    </header>
+   
+        <form class="locationForm mt-5">
             <input type="text" name="location" class="form-control" placeholder="Toronto.." autocomplete="off">
         </form>
-    </div>
         
-    <div class="my-4 container">
+    <div class="my-5 container">
         
     </div>
+
+    <div class="flex-grow-1"></div>
+    <footer class="text-center py-1" ><a href="https://github.com/F4isalSH" target="blank"><img src="img/GitHub-Mark-64px.png"></a></footer>
+
+    
 <script src="forecast.js"></script>
 <script src="app.js"></script>
 </body>
